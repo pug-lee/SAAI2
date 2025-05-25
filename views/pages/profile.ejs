@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - There's Something About AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/profile.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <div class="logo-icon">AI</div>
+                    <h1 class="logo-text">There's Something About AI</h1>
+                </a>
+                <nav class="nav">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="instructions.html" class="nav-link">Instructions</a>
+                    <a href="about.html" class="nav-link">About</a>
+                    <a href="roadmap.html" class="nav-link">Roadmap</a>
+                    <a href="profile.html" class="nav-link profile-link active">Profile</a>
+                </nav>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main profile-main">
+        <div class="container">
+            <div class="profile-container">
+                <div class="profile-header">
+                    <div class="profile-avatar">
+                        <span id="avatarInitials">U</span>
+                    </div>
+                    <div class="profile-info">
+                        <h1 id="profileUsername">Username</h1>
+                        <p id="profileEmail">user@example.com</p>
+                        <p class="member-since">Member since <span id="memberSince">January 2024</span></p>
+                    </div>
+                </div>
+
+                <div class="profile-stats">
+                    <div class="stat-card">
+                        <div class="stat-number" id="totalPrompts">0</div>
+                        <div class="stat-label">Total Prompts</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" id="totalComparisons">0</div>
+                        <div class="stat-label">Comparisons Made</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" id="favoriteAI">GPT-4</div>
+                        <div class="stat-label">Most Used AI</div>
+                    </div>
+                </div>
+
+                <div class="profile-actions">
+                    <a href="edit-profile.html" class="action-btn primary">Edit Profile</a>
+                    <button class="action-btn secondary" id="logoutBtn">Sign Out</button>
+                </div>
+
+                <div class="profile-sections">
+                    <div class="section">
+                        <h2>Recent Activity</h2>
+                        <div class="activity-list" id="activityList">
+                            <div class="activity-item">
+                                <div class="activity-icon">🔍</div>
+                                <div class="activity-content">
+                                    <div class="activity-title">Compared AI responses</div>
+                                    <div class="activity-description">Analyzed responses for "Explain machine learning"</div>
+                                    <div class="activity-time">2 hours ago</div>
+                                </div>
+                            </div>
+                            <div class="activity-item">
+                                <div class="activity-icon">📝</div>
+                                <div class="activity-content">
+                                    <div class="activity-title">Submitted new prompt</div>
+                                    <div class="activity-description">"What is the future of AI?"</div>
+                                    <div class="activity-time">1 day ago</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="section">
+                        <h2>Prompt History</h2>
+                        <div class="history-list" id="historyList">
+                            <!-- History items will be loaded dynamically -->
+                        </div>
+                        <button class="view-all-btn" id="viewAllHistory">View All History</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <h3>There's Something About AI</h3>
+                <p>Compare and analyze GenAI responses with sophisticated semantic analysis</p>
+                <div class="footer-bottom">
+                    <p>© 2024 There's Something About AI. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/profile.js"></script>
+</body>
+</html>

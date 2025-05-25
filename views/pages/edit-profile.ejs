@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Profile - There's Something About AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/auth.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <div class="logo-icon">AI</div>
+                    <h1 class="logo-text">There's Something About AI</h1>
+                </a>
+                <nav class="nav">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="instructions.html" class="nav-link">Instructions</a>
+                    <a href="about.html" class="nav-link">About</a>
+                    <a href="roadmap.html" class="nav-link">Roadmap</a>
+                    <a href="profile.html" class="nav-link profile-link">Profile</a>
+                </nav>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main auth-main">
+        <div class="container">
+            <div class="auth-container">
+                <div class="auth-card">
+                    <div class="auth-header">
+                        <h1>Edit Profile</h1>
+                        <p>Update your account information and password</p>
+                    </div>
+
+                    <form class="auth-form" id="editProfileForm">
+                        <div class="form-group">
+                            <label for="editUsername">Username</label>
+                            <input type="text" id="editUsername" name="username" required>
+                            <span class="error-message" id="usernameError"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="editEmail">Email Address</label>
+                            <input type="email" id="editEmail" name="email" required>
+                            <span class="error-message" id="emailError"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="currentPassword">Current Password</label>
+                            <input type="password" id="currentPassword" name="currentPassword" required>
+                            <span class="error-message" id="currentPasswordError"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="newPassword">New Password (leave blank to keep current)</label>
+                            <input type="password" id="newPassword" name="newPassword">
+                            <span class="error-message" id="newPasswordError"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="confirmNewPassword">Confirm New Password</label>
+                            <input type="password" id="confirmNewPassword" name="confirmNewPassword">
+                            <span class="error-message" id="confirmNewPasswordError"></span>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="submit" class="auth-submit-btn">Update Profile</button>
+                            <a href="profile.html" class="cancel-btn">Cancel</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <h3>There's Something About AI</h3>
+                <p>Compare and analyze GenAI responses with sophisticated semantic analysis</p>
+                <div class="footer-bottom">
+                    <p>© 2024 There's Something About AI. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/edit-profile.js"></script>
+</body>
+</html>

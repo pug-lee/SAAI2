@@ -1,0 +1,269 @@
+
+/* Results Page Specific Styles */
+
+.results-section {
+    padding: 2rem 0 4rem;
+    background: var(--cream);
+}
+
+.results-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.results-header h1 {
+    font-family: var(--font-playfair);
+    font-weight: bold;
+    font-size: 2.5rem;
+    color: var(--navy);
+    margin-bottom: 1rem;
+}
+
+.prompt-display {
+    background: var(--pearl);
+    border: 2px solid var(--emerald);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin: 0 auto;
+    max-width: 800px;
+    font-family: var(--font-inter);
+}
+
+.prompt-display strong {
+    color: var(--navy);
+    margin-right: 0.5rem;
+}
+
+/* Comparison Controls */
+.comparison-controls {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.compare-btn {
+    background: var(--pearl);
+    border: 2px solid var(--emerald);
+    color: var(--emerald);
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.compare-btn:hover,
+.compare-btn.active {
+    background: var(--emerald);
+    color: white;
+}
+
+/* Responses Grid */
+.responses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.response-card {
+    background: white;
+    border: 3px solid var(--gold);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    position: relative;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(26, 35, 126, 0.1);
+}
+
+.response-card::before {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    background: linear-gradient(135deg, var(--navy), var(--emerald), var(--gold));
+    border-radius: 1rem;
+    opacity: 0.1;
+    z-index: -1;
+}
+
+.response-card.highlighted {
+    border-color: var(--emerald);
+    transform: scale(1.02);
+    box-shadow: 0 15px 40px rgba(0, 105, 92, 0.2);
+}
+
+.response-card.dimmed {
+    opacity: 0.4;
+    transform: scale(0.98);
+}
+
+.response-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--pearl);
+}
+
+.response-header h3 {
+    font-family: var(--font-playfair);
+    font-weight: bold;
+    color: var(--navy);
+    font-size: 1.25rem;
+}
+
+.ai-badge {
+    background: var(--emerald);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 1rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.response-content {
+    color: var(--midnight);
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+.response-content p {
+    margin-bottom: 1rem;
+}
+
+.response-content .highlight {
+    background: rgba(255, 215, 0, 0.3);
+    padding: 0.1rem 0.2rem;
+    border-radius: 0.2rem;
+}
+
+.response-content .difference {
+    background: rgba(239, 68, 68, 0.2);
+    padding: 0.1rem 0.2rem;
+    border-radius: 0.2rem;
+}
+
+/* Differences Section */
+.differences-section {
+    background: var(--pearl);
+    border: 3px solid var(--copper);
+    border-radius: 1rem;
+    padding: 2rem;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.differences-section::before {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    background: linear-gradient(135deg, var(--copper), var(--gold), var(--emerald));
+    border-radius: 1rem;
+    opacity: 0.1;
+    z-index: -1;
+}
+
+.differences-section h2 {
+    font-family: var(--font-playfair);
+    font-weight: bold;
+    color: var(--navy);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.differences-content {
+    space-y: 1rem;
+}
+
+.difference-item {
+    background: white;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border-left: 4px solid var(--copper);
+    margin-bottom: 1rem;
+}
+
+.difference-item strong {
+    color: var(--navy);
+}
+
+/* New Prompt Section */
+.new-prompt-section {
+    padding: 4rem 0;
+    background: rgba(26, 35, 126, 0.05);
+}
+
+/* Grid Layout Adjustments */
+.responses-grid.two-column {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.responses-grid.single-column {
+    grid-template-columns: 1fr;
+    max-width: 800px;
+    margin: 0 auto 3rem;
+}
+
+/* Loading States */
+.loading {
+    opacity: 0.6;
+    position: relative;
+}
+
+.loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin: -10px 0 0 -10px;
+    border: 2px solid var(--emerald);
+    border-top: 2px solid transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .responses-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .comparison-controls {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .compare-btn {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .results-header h1 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .response-card {
+        padding: 1rem;
+    }
+    
+    .differences-section {
+        padding: 1.5rem;
+    }
+    
+    .prompt-display {
+        padding: 0.75rem;
+        font-size: 0.9rem;
+    }
+}

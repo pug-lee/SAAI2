@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>There's Something About AI</title>
+    <meta name="description" content="Compare GenAI responses across multiple engines with semantic analysis">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <div class="logo-icon">AI</div>
+                    <h1 class="logo-text">There's Something About AI</h1>
+                </a>
+                <nav class="nav">
+                    <a href="index.html" class="nav-link active">Home</a>
+                    <a href="instructions.html" class="nav-link">Instructions</a>
+                    <a href="about.html" class="nav-link">About</a>
+                    <a href="roadmap.html" class="nav-link">Roadmap</a>
+                    <a href="profile.html" class="nav-link profile-link">Profile</a>
+                </nav>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+            </div>
+            <div class="mobile-nav" id="mobileNav">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="instructions.html" class="nav-link">Instructions</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="roadmap.html" class="nav-link">Roadmap</a>
+                <a href="profile.html" class="nav-link">Profile</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">
+                        Compare <span class="gradient-text">AI Responses</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        Send your prompts to multiple GenAI engines and discover the semantic differences 
+                        with our advanced comparison tools
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Prompt Input Section -->
+        <section class="prompt-section">
+            <div class="container">
+                <div class="prompt-card">
+                    <div class="prompt-header">
+                        <h2>Enter Your Prompt</h2>
+                        <div class="history-dropdown">
+                            <button class="history-btn" id="historyBtn">History ▼</button>
+                            <div class="history-menu" id="historyMenu">
+                                <div class="history-item">Previous prompt 1...</div>
+                                <div class="history-item">Previous prompt 2...</div>
+                                <div class="history-item">Previous prompt 3...</div>
+                            </div>
+                        </div>
+                    </div>
+                    <textarea 
+                        class="prompt-input" 
+                        id="promptInput"
+                        placeholder="Type your prompt here..."
+                        rows="6"
+                    ></textarea>
+                    <button class="submit-btn" id="submitBtn">Compare AI Responses</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features">
+            <div class="container">
+                <div class="features-header">
+                    <h2>Sophisticated AI Analysis</h2>
+                    <p>Our platform provides detailed semantic comparison across multiple AI engines</p>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🔍</div>
+                        <h3>Multi-Engine Comparison</h3>
+                        <p>Compare responses from 3 different AI engines simultaneously</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🧠</div>
+                        <h3>Semantic Analysis</h3>
+                        <p>Highlight differences and similarities with advanced algorithms</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">✨</div>
+                        <h3>Professional Interface</h3>
+                        <p>Clean, intuitive design perfect for academic and research use</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <h3>There's Something About AI</h3>
+                <p>Compare and analyze GenAI responses with sophisticated semantic analysis</p>
+                <div class="footer-bottom">
+                    <p>© 2024 There's Something About AI. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

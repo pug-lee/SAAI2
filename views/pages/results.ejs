@@ -1,0 +1,147 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results - There's Something About AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/results.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <div class="logo-icon">AI</div>
+                    <h1 class="logo-text">There's Something About AI</h1>
+                </a>
+                <nav class="nav">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="instructions.html" class="nav-link">Instructions</a>
+                    <a href="about.html" class="nav-link">About</a>
+                    <a href="roadmap.html" class="nav-link">Roadmap</a>
+                    <a href="profile.html" class="nav-link profile-link">Profile</a>
+                </nav>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Results Section -->
+    <main class="main">
+        <section class="results-section">
+            <div class="container">
+                <div class="results-header">
+                    <h1>AI Response Comparison</h1>
+                    <div class="prompt-display">
+                        <strong>Your Prompt:</strong>
+                        <span id="displayPrompt">Loading...</span>
+                    </div>
+                </div>
+
+                <!-- Comparison Controls -->
+                <div class="comparison-controls">
+                    <button class="compare-btn active" data-compare="1-2">Compare AI 1 vs AI 2</button>
+                    <button class="compare-btn" data-compare="1-3">Compare AI 1 vs AI 3</button>
+                    <button class="compare-btn" data-compare="2-3">Compare AI 2 vs AI 3</button>
+                    <button class="compare-btn" data-compare="all">Show All</button>
+                </div>
+
+                <!-- AI Responses Grid -->
+                <div class="responses-grid" id="responsesGrid">
+                    <div class="response-card" data-ai="1">
+                        <div class="response-header">
+                            <h3>GPT-4</h3>
+                            <span class="ai-badge">AI Engine 1</span>
+                        </div>
+                        <div class="response-content" id="response1">
+                            <p>This is a sample response from GPT-4. It provides comprehensive analysis with detailed explanations and examples. The response demonstrates strong reasoning capabilities and covers multiple aspects of the query with high accuracy and relevance.</p>
+                        </div>
+                    </div>
+
+                    <div class="response-card" data-ai="2">
+                        <div class="response-header">
+                            <h3>Claude</h3>
+                            <span class="ai-badge">AI Engine 2</span>
+                        </div>
+                        <div class="response-content" id="response2">
+                            <p>Claude's response focuses on structured analysis and ethical considerations. It offers a different perspective with emphasis on practical applications and potential limitations. The approach is methodical and includes relevant context.</p>
+                        </div>
+                    </div>
+
+                    <div class="response-card" data-ai="3">
+                        <div class="response-header">
+                            <h3>Gemini</h3>
+                            <span class="ai-badge">AI Engine 3</span>
+                        </div>
+                        <div class="response-content" id="response3">
+                            <p>Gemini provides a concise yet informative response with focus on key insights. The answer is well-structured and includes specific examples that illustrate the main points effectively. It balances brevity with comprehensiveness.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Differences Display -->
+                <div class="differences-section">
+                    <h2>Key Differences</h2>
+                    <div class="differences-content" id="differencesContent">
+                        <div class="difference-item">
+                            <strong>Approach:</strong> GPT-4 focuses on comprehensive analysis, Claude emphasizes ethical considerations, while Gemini provides concise insights.
+                        </div>
+                        <div class="difference-item">
+                            <strong>Detail Level:</strong> GPT-4 offers extensive detail, Claude provides structured analysis, Gemini balances brevity with depth.
+                        </div>
+                        <div class="difference-item">
+                            <strong>Perspective:</strong> Each AI brings unique viewpoints to the same query, demonstrating diverse analytical approaches.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- New Prompt Section -->
+        <section class="new-prompt-section">
+            <div class="container">
+                <div class="prompt-card">
+                    <div class="prompt-header">
+                        <h2>Try Another Prompt</h2>
+                        <div class="history-dropdown">
+                            <button class="history-btn" id="historyBtn">History ▼</button>
+                            <div class="history-menu" id="historyMenu">
+                                <div class="history-item">Previous prompt 1...</div>
+                            </div>
+                        </div>
+                    </div>
+                    <textarea 
+                        class="prompt-input" 
+                        id="promptInput"
+                        placeholder="Type your next prompt here..."
+                        rows="4"
+                    ></textarea>
+                    <button class="submit-btn" id="submitBtn">Compare AI Responses</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <h3>There's Something About AI</h3>
+                <p>Compare and analyze GenAI responses with sophisticated semantic analysis</p>
+                <div class="footer-bottom">
+                    <p>© 2024 There's Something About AI. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/results.js"></script>
+</body>
+</html>
