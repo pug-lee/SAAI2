@@ -1,0 +1,7 @@
+{
+  "name": "SAAI",
+  "extensions": [
+    "ms-python.python"
+  ],
+  // Add other configurations as needed
+}
