@@ -9,6 +9,8 @@
     "start": "node server.js"
   },
   "dependencies": {
-    "express": "^4.20.0"
+    "ejs": "^3.1.10",
+    "express": "^4.20.0",
+    "pip": "^0.0.1"
   }
 }
